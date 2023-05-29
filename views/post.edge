@@ -1,0 +1,36 @@
+@layout('layouts/app')
+@section('content')
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{post.image}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>{{post.title}}</h1>
+                            <span class="subheading">{{post.description}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {{post.content}}
+                </div>
+            </div>
+        </div>
+        @if( user && post.userName == user.username)
+        <div style="display: flex; justify-content:space-between; width:30%; margin-left: 30%; padding-top: 5%">
+            <div>
+                <a href="/edit/{{post._id}}">Edit</a>
+            </div>
+            <div>
+                <a href="/delete/{{post._id}}">Delete</a>
+            </div>
+
+        </div>
+        @endif
+
+@endsection

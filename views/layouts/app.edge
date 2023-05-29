@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Popsi blog</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Popsi blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
+                        @if(!userId)
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/auth/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/auth/login">Login</a></li>
+                        @else
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/posts/new">Create Post</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="">{{user.username}}</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 text-danger" href="/auth/logout">Log out</a></li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @!section('content')
+        <!-- Footer-->
+       		<!-- Footer -->
+		<footer class="text-center text-lg-start bg-light text-muted">
+			<!-- Section: Social media -->
+			<section
+				class="container p-4 text-center"
+			>
+				
+
+				<!-- Right -->
+				<div class="mb">
+					<a href="https://twitter.com/Samson_Akinola1" target="_blank" class="me-4 text-reset">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="https://linkedin.com/in/akinola-samson-438458124" target="_blank" class="me-4 text-reset">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a href="https://github.com/Popsicool" target="_blank" class="me-4 text-reset">
+						<i class="fa fa-github"></i>
+					</a>
+					<a href="https://fb.com/popsicool11" target="_blank" class="me-4 text-reset">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="https://codepen.io/popsicool"target="_blank" class="me-4 text-reset">
+						<i class="fa fa-codepen"></i>
+					</a>
+					<a href="https://instagram.com/i_am_popsicool" target="_blank" class="me-4 text-reset">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</div>
+				<!-- Right -->
+			</section>
+			<!-- Section: Social media -->
+
+			<div class="container p-4 pb-0">
+				<!-- Section: Form -->
+				<section class="">
+					<form id="sub-form">
+						<!--Grid row-->
+						<div class="row d-flex justify-content-center">
+							<!--Grid column-->
+							<div class="col-auto">
+								<p class="pt-2">
+									<strong>subscribe to my newsletter</strong>
+								</p>
+							</div>
+							<!--Grid column-->
+
+							<!--Grid column-->
+							<div class="col-md-5 col-12">
+								<!-- Email input -->
+								<div class="form-outline form-white mb-4">
+									<input
+										type="email"
+										id="email-sub"
+										class="form-control"
+										name="email"
+										required
+									/>
+									<!-- <label class="form-label" for="form5Example29">Email address</label> -->
+								</div>
+							</div>
+							<!--Grid column-->
+
+							<!--Grid column-->
+							<div class="col-auto">
+								<!-- Submit button -->
+								<button type="submit" class="btn btn-primary mb-4">
+									Subscribe
+								</button>
+							</div>
+							<!--Grid column-->
+						</div>
+						<div class="text-center" id="subres"></div>
+						<!--Grid row-->
+					</form>
+				</section>
+				<!-- Section: Form -->
+			</div>
+
+			<!-- Section: Links  -->
+			<section class="">
+				<div class="container text-center text-md-start mt-5">
+					<!-- Grid row -->
+					<div class="row mt-3">
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<!-- Content -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<i class="fa-solid fa-gem me-3"></i>What I do
+							</h6>
+							<p>
+								I'm a software engineer from Nigeria, Specializes in Backend
+								development and DevOps, i look into frontend as well
+							</p>
+						</div>
+
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">Check my</h6>
+							<p>
+								<a href="https://drive.google.com/file/d/19dHNkG0W4IJ-lLIB4V7AP9e1_e1vloKR/view?usp=share_link" target="_blank" class="text-reset">Resume</a>
+							</p>
+							<!-- <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p> -->
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">Jump to</h6>
+							<p>
+								<a href="/" class="text-reset">Home</a>
+							</p>
+							<!-- <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p> -->
+						</div>
+						<!-- Grid column -->
+
+						<!-- Grid column -->
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">Contact Me</h6>
+							<p><i class="fa fa-home me-3"></i>Ibadan, Nigeria</p>
+							<p>
+								<i class="fa fa-envelope me-3"></i>
+								akinolasamson1234@gmail.com
+							</p>
+							<p><i class="fa fa-phone me-3"></i> + 234 806 948 2021</p>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+			</section>
+			<!-- Section: Links  -->
+
+			<!-- Copyright -->
+			<div
+				class="text-center p-4 bg-dark"
+			>
+				© <b id="year"></b> Copyright:
+				<a class="text-reset fw-bold" href="https://www.me.popsicool.tech/"
+					>Akinola Samson</a
+				>
+			</div>
+
+
+		</div>
+			<!-- Copyright -->
+		</footer>
+
+		<script type="text/javascript">
+		var year = new Date();
+		window.onload = function () {
+		document.getElementById("year").innerHTML = year.getFullYear()
+	};
+		</script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
